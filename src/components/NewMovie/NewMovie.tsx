@@ -4,10 +4,10 @@ import { MovieField } from '../../constants/MovieField';
 import { Movie } from '../../types/Movie';
 
 type Props = {
-  onAddMovie: (movie: Movie) => void;
+  onAdd: (movie: Movie) => void;
 };
 
-export const NewMovie: React.FC<Props> = ({ onAddMovie = () => {} }) => {
+export const NewMovie: React.FC<Props> = ({ onAdd: onAddMovie = () => {} }) => {
   const [movieData, setMovieData] = useState<Movie>({
     title: '',
     description: '',
